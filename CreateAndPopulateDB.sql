@@ -6,7 +6,7 @@ GO
 CREATE DATABASE University;
 GO
 
--- tell the database engine to run commands against the master database
+-- tell the database engine to run commands against the newely created University database
 USE University;
 GO
 
@@ -18,7 +18,7 @@ CREATE TABLE Students (
 	Email NVARCHAR(20),
 	PhoneNumber NVARCHAR(25),
 	AverageGrade FLOAT,
-	FacultyId INT -- a foreign key to relate Student to Faculty table
+	FacultyId INT -- a foreign key to relate Students table to Faculties table
 );
 GO
 
