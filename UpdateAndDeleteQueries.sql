@@ -40,3 +40,15 @@ WHERE Id IN (1, 2);
 
 -- delete all (if conditions are not specified) 
 DELETE FROM Students;
+
+-- change table column data type
+ALTER TABLE Students
+ALTER COLUMN FirstName NVARCHAR(100) NOT NULL;
+
+-- add a new table column
+ALTER TABLE Students
+ADD Curator NVARCHAR(25);
+
+-- remove a table column 
+ALTER TABLE Students
+DROP COLUMN Curator;
