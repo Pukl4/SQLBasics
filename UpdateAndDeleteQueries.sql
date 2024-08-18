@@ -13,7 +13,7 @@ UPDATE Students
 SET 
 	FirstName = 'Nick',
 	LastName = 'Smith'
-WHERE Id = 1 AND AverageGrade > 5;
+WHERE FacultyId = 2 AND AverageGrade > 6;
 
 -- update by multiple ids
 UPDATE Students
@@ -26,7 +26,7 @@ UPDATE Students
 SET
 	AverageGrade = 4;
 
--- delete a single record from Employees table
+-- delete a single record from Students table
 DELETE FROM Students
 WHERE Id = 1;
 
@@ -52,3 +52,18 @@ ADD Curator NVARCHAR(25);
 -- remove a table column 
 ALTER TABLE Students
 DROP COLUMN Curator;
+
+-- drop is similar to delete but applies to database objects instead of table records
+-- we can drop tables, databases, constraints, views, and other database objects.
+
+-- remove Students table
+DROP TABLE Students;
+GO
+
+-- tell the database engine to run the following commands against the master database, since we are removing University
+USE master;
+GO
+
+-- remove University database
+DROP DATABASE University;
+GO
