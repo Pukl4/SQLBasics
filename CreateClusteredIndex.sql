@@ -37,3 +37,13 @@ GO
 -- remove the index
 DROP INDEX IF EXISTS PK_Student ON Students;
 GO
+
+-- create a non-clustered index on the last name column
+CREATE NONCLUSTERED INDEX NK_Student ON Students (LastName);
+
+-- create a non-clustered with ordering
+CREATE NONCLUSTERED INDEX NK_Student ON Students (LastName ASC); -- optional sorting argument
+
+-- remove the index
+DROP INDEX IF EXISTS NK_Student ON Students;
+GO
