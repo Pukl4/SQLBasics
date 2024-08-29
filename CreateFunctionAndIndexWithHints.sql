@@ -41,7 +41,7 @@ BEGIN
 	WHERE Id = @StudentId;
 
 	-- get faculty name by id
-	SELECT @facultyName = fc.Name
+	SELECT @FacultyName = fc.Name
 	FROM Faculties fc
 	WHERE Id = @FacultyId;
 	
